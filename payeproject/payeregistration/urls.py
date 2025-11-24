@@ -1,5 +1,5 @@
 from django.urls import path
-from payeregistration import views
+from . import views
 
 urlpatterns = [
     path('register/', views.registration, name="register"),

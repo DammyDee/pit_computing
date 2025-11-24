@@ -8,7 +8,7 @@ def registration(request):
         form = PAYEAgentForm(request.POST)
         if form.is_valid():
             agent = form.save(commit=False) # Adjust as necessary to handle password hashing if needed
-            agent.password = make_password(form.cleaned_data['password'])
+            agent.agent_password = make_password(form.cleaned_data['agent_password'])
             agent.save()
             return redirect('success')  # Redirect to a success page after registration
     form = PAYEAgentForm()

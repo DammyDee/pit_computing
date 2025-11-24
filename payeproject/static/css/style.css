@@ -19,6 +19,16 @@ html {
   align-items: center;
 }
 
+.home{
+  width: 60%;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
   background-color: #333;
   color: white;

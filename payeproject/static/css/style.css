@@ -76,12 +76,33 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 70%;
+  width: 50%;
   height: 80vh;
-  margin: auto;
+  margin: 0.8rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
 }
 
 .reg-form > div {
   display: flex;
-  background-color: #f4f4f4;
+  /* column-gap: 5rem; */
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+
+.reg-form label {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.submit-btn {
+  width: 30%;
+  height: 3rem;
+  font-size: 1.6rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
 }

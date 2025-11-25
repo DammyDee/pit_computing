@@ -11,7 +11,8 @@ def registration(request):
             agent.agent_password = make_password(form.cleaned_data['agent_password'])
             agent.save()
             return redirect('success')  # Redirect to a success page after registration
-    form = PAYEAgentForm()
+    else:
+        form = PAYEAgentForm()
     return render(request, 'registration.html', {'form': form})
 
 def success(request):

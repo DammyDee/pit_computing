@@ -1,7 +1,6 @@
 from django import forms
 from . import models
 class PAYEAgentForm(forms.ModelForm):
-    agent_password = forms.CharField(max_length=128, widget=forms.PasswordInput())
     confirm_password = forms.CharField(max_length=128, widget=forms.PasswordInput())
     class Meta:
         model = models.PAYEAgent
@@ -14,7 +13,7 @@ class PAYEAgentForm(forms.ModelForm):
         cleaned_data = super().clean()
         password = cleaned_data.get("agent_password")
         confirm_password = cleaned_data.get("confirm_password")
-        
+
         if password != confirm_password:
-            raise forms.ValidationError("Password and Confirm Password do not match.")
+            raise forms.ValidationError("Please enter matching passwords.")
         return cleaned_data

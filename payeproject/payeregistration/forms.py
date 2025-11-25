@@ -12,6 +12,7 @@ class PAYEAgentForm(forms.ModelForm):
         if models.PAYEAgent.objects.filter(payer_id=payer_id).exists():
             raise forms.ValidationError("Payer ID already exists.")
         return payer_id
+    
     def clean_agent_password(self):
         password = self.cleaned_data.get('agent_password')
         if len(password) < 8:

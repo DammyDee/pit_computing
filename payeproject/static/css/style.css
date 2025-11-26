@@ -116,3 +116,10 @@ html {
   border-radius: 0.4rem;
   cursor: pointer;
 }
+
+.errorlist {
+  color: red;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: none;
+}

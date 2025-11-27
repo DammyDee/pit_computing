@@ -6,7 +6,7 @@
   {% csrf_token %}
   {% if messages %}
     {% for message in messages %}
-      <div>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+      <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
     {% endfor %}
   {% endif %}
   <div class="label"><label for="payer_id">Payer ID:</label></div>

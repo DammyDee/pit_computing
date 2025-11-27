@@ -15,8 +15,11 @@ def login_view(request):
                     return redirect('dashboard')  # Redirect to a dashboard or home page
                 else:
                     error_message = "Invalid password."
+                    messages.error(request, error_message)
             except PAYEAgent.DoesNotExist:
                 error_message = "Agent ID does not exist."
+                messages.error(request, error_message)
     else:
         error_message = None
+        messages.error(request, error_message)
     return render(request, 'login.html')

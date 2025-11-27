@@ -1,8 +1,14 @@
 {% extends "layout.html" %} 
 {% block title %} Login Page {% endblock %}
 {% block content %}
+
 <form method="post" class="login-form">
   {% csrf_token %}
+  {% if messages %}
+    {% for message in messages %}
+      <div>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+    {% endfor %}
+  {% endif %}
   <div class="label"><label for="payer_id">Payer ID:</label></div>
   <div class="input"><input type="text" id="payer_id" name="id" required /></div>
   <div class="label"><label for="password">Password:</label></div>

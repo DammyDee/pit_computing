@@ -31,3 +31,7 @@ def login_view(request):
 @login_required
 def dashboard_view(request):
     return render(request, 'payedashboard.html')
+
+def logout_view(request):
+    request.session.flush()
+    return redirect('login')

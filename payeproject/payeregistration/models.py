@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.hashers import make_password, check_password
+from django.contrib.auth.hashers import check_password
 # Create your models here.
 class PAYEAgent(models.Model):
     payer_id = models.CharField(max_length=100, primary_key=True)

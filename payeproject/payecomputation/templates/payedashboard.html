@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+    PAYE Dashboard
+{% endblock title %}
+{% block content %}
+<table>
+{% for payecomputation in payecomputations %}
+    <tr>
+        <td>{{ payecomputation.employee_name }}</td>
+        <td>{{ payecomputation.paye_amount }}</td>
+        <td>{{ payecomputation.computation_date }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock  %}

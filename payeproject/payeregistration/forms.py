@@ -1,5 +1,6 @@
 from django import forms
 from . import models
+
 class PAYEAgentForm(forms.ModelForm):
     confirm_password = forms.CharField(max_length=128, widget=forms.PasswordInput())
     class Meta:
@@ -9,6 +10,7 @@ class PAYEAgentForm(forms.ModelForm):
             'agent_password': forms.PasswordInput(),
         }
 
+    
     def clean(self):
         cleaned_data = super().clean()
         password = cleaned_data.get("agent_password")

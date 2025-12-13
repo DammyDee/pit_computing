@@ -4,6 +4,13 @@
 {% endblock title %}
 {% block content %}
 <table>
+    <thead>
+        <tr>
+            <th>TDC ID</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
 {% for payecomputation in payecomputations %}
     <tr>
         <td>{{ payecomputation.employee_name }}</td>

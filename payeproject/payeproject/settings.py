@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'payeregistration',
     'payecomputation',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
